@@ -8,7 +8,7 @@
     
     textArea.addEventListener('focus', function() {
         charsCounter.style.display = 'block';
-        charsCounter.innerHTML = 'Characters left: ' + charsLeft();
+        charsCounter.innerHTML = 'Characters left: <b>' + charsLeft() + '</b>';
     });
     
     textArea.addEventListener('input', function() {
