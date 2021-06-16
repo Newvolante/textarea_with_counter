@@ -3,4 +3,26 @@
 
     let textArea = document.getElementById('input_text');
     let charsCounter = document.getElementById('counter');
+
+    charsCounter.style.display = 'none';
+    
+    textArea.addEventListener('mouseenter', function() {
+        charsCounter.style.display = 'block';
+        charsCounter.innerHTML = 'Characters left: ' + charsLeft();
+    });
+    
+    textArea.addEventListener('input', function() {
+        charsCounter.innerHTML = 'Characters left: ' + charsLeft();
+    });
+
+    textArea.addEventListener('mouseleave', function() {
+        charsCounter.style.display = 'none';
+    });
+
+
+
+    function charsLeft() {
+        let charsInput = textArea.value.length;
+        return 155 - charsInput;
+    }
 })();
