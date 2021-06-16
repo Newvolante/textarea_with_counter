@@ -6,7 +6,7 @@
 
     charsCounter.style.display = 'none';
     
-    textArea.addEventListener('mouseenter', function() {
+    textArea.addEventListener('focus', function() {
         charsCounter.style.display = 'block';
         charsCounter.innerHTML = 'Characters left: ' + charsLeft();
     });
@@ -15,11 +15,9 @@
         charsCounter.innerHTML = 'Characters left: ' + charsLeft();
     });
 
-    textArea.addEventListener('mouseleave', function() {
+    textArea.addEventListener('blur', function() {
         charsCounter.style.display = 'none';
     });
-
-
 
     function charsLeft() {
         let charsInput = textArea.value.length;
