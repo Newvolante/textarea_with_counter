@@ -12,7 +12,7 @@
     });
     
     textArea.addEventListener('input', function() {
-        charsCounter.innerHTML = 'Characters left: ' + charsLeft();
+        charsCounter.innerHTML = 'Characters left: <b>' + charsLeft() + '</b>';
     });
 
     textArea.addEventListener('blur', function() {
